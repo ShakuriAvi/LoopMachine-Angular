@@ -1,27 +1,17 @@
-# MoveoTask
+# LoopMachine-Angular
+</br>
+There are 9 elements in the program: each element is a song that plays for ten seconds,</br>
+under each element there are two buttons: play and stop.</br>
+There is also a status box that shows the status of the song (on\off).</br>
+When the user click on Play button the status box change to "On".</br>
+When the user click on Stop button the status box change to "Off".</br>
+In addition, at the bottom of the page, appears all the actions that the user performed in order.</br>
+After click on start buttom the song is played only in the next loop (the next loop happens when all the songs have finished playing together - end of cycle).</br>
+When the user presses the stop button the song stop immediately.</br>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
+# Implementation
+The program was implemented in Angular.</br>
+The program read from the Json file all the song names that the program will play.</br>
+The program is responsive to any cell phone / web browser device. </br>
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
