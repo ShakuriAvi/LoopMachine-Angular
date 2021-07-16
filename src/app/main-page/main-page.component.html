@@ -1,0 +1,21 @@
+<div class="squers">
+    <div class="unit" *ngFor="let squer of lstSquersItems; let i = index">
+        <h1>{{squer.audioName}}</h1>
+        <span class="status">
+        {{squer.status}}
+    </span>
+        <div>
+            <button class="play" (click)="playSound(squer)">Play</button>
+            <button class="stop" (click)="stopSound(squer)">Stop</button>
+        </div>
+    </div>
+
+    <div class="rounds">
+
+        <h1> User Action </h1>
+        <div *ngFor="let action of saveUserAction; let i = index">
+            <p> {{i+1}} :{{action}}</p>
+        </div>
+
+    </div>
+</div>
