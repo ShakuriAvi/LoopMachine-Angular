@@ -12,20 +12,17 @@ import { interval, Subscription } from 'rxjs';
 export class MainPageComponent implements OnInit {
   lstSquersItems: Array<Squer> = [];
   lstNameItems: Array<string> = [];
-  subscription: any;
-  source = interval(10000);
-  text = 'Your Text Here';
-
-  countRound: number = 0;
-  lstSquersNextRound: Array<Squer> = [];
-  lstSquersThisRound: Array<Squer> = [];
-  saveUserAction: Array<String> =[];
+  subscription: any; // for start interval
+  source = interval(10000); //time interval ten second
+  countSong: number = 0; //  count active songs (songs that wait to next loop or work in current loop)
+  lstSquersNextRound: Array<Squer> = []; //save the next Squers that play
+  lstSquersThisRound: Array<Squer> = []; //save the current Squers that play
+  saveUserAction: Array<String> = [];
   constructor(private json: AppSettingsService) {
     console.log('const');
     json.getData('../assets/lstNameAudio.json').subscribe((result) => {
       this.lstNameItems = result;
       console.log(this.lstNameItems);
-      console.log(this.lstNameItems.length);
       this.initSquers();
     });
   }
@@ -59,35 +56,31 @@ export class MainPageComponent implements OnInit {
   playSound(squre: Squer): void {
     console.log('play');
     console.log(this.subscription);
-       
-    if (this.countRound == 0 && this.subscription !=undefined) {
+
+    if (this.countSong == 0 && this.subscription != undefined) {
       this.ngOnDestroy();
     }
-    if (this.countRound == 0) {
+    if (this.countSong == 0) {
       this.lstSquersThisRound.push(squre);
-        squre.audio.load();
-        squre.audio.play();
-            this.subscription = this.source.subscribe((val) =>
-              this.opensnack()
-            );  
-      }
-      this.saveUserAction.push(' User play the song - ' + squre.audioName);
+      squre.audio.load();
+      squre.audio.play();
+      this.subscription = this.source.subscribe((val) => this.openInterval());
+    }
+    this.saveUserAction.push(' User play the song - ' + squre.audioName);
     this.lstSquersNextRound.push(squre);
-    this.countRound++;
+    this.countSong++;
     this.changeStatus(squre, 'on');
   }
   ngOnDestroy() {
-   this.subscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
   stopSound(squre: Squer): void {
     console.log('stop');
-    if (this.countRound > 0) {
+    if (this.countSong > 0) {
       this.changeStatus(squre, 'off');
       this.deleteSquer(squre);
-      this.countRound--;
+      this.countSong--;
     }
-  
-      
   }
   deleteSquer(squre: Squer) {
     squre.audio.pause();
@@ -97,21 +90,21 @@ export class MainPageComponent implements OnInit {
       this.saveUserAction.push(' User stop the song - ' + squre.audioName);
     }
   }
-  opensnack() {
-    // I've just commented this so that you're not bombarded with an alert.
-    this.lstSquersThisRound = Object.assign([], this.lstSquersNextRound);
+  /*
+    each interval work ten second
+  */
+  openInterval() {
+    this.lstSquersThisRound = Object.assign([], this.lstSquersNextRound); // copy the next loop to current loop
     this.lstSquersThisRound.forEach((squre) => {
       squre.audio.load();
       squre.audio.play();
       this.changeStatus(squre, 'on');
-     // alert(squre.audioName);
+      // alert(squre.audioName);
       console.log(squre.audioName);
       console.log('Squers this Round : ' + this.lstSquersThisRound);
       console.log('Squers Next Round : ' + this.lstSquersNextRound.values);
     });
   }
 
-  ngOnInit(): void {
-    console.log('ngOnInit');
-  }
+  ngOnInit(): void {}
 }
