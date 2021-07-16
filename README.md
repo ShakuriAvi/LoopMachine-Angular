@@ -15,6 +15,8 @@ The program read from the Json file all the song names that the program will pla
 The program is responsive to any cell phone / web browser device. </br>
 
 
-<img src="https://user-images.githubusercontent.com/65177459/125970498-57d1cf5d-dd90-427e-bb75-31faadc4e8c4.png" width="850" height="900">
+
+
+![moveoPart1](https://user-images.githubusercontent.com/65177459/125970498-57d1cf5d-dd90-427e-bb75-31faadc4e8c4.png)
 </br>
-<img src="https://user-images.githubusercontent.com/65177459/125970505-1a14d2d2-1787-4ef8-8d8b-a7ecee3a183f.png" width="850" height="900">
+![moveoPart2](https://user-images.githubusercontent.com/65177459/125970505-1a14d2d2-1787-4ef8-8d8b-a7ecee3a183f.png)
