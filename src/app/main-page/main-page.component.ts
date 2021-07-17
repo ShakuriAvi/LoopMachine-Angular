@@ -65,6 +65,8 @@ export class MainPageComponent implements OnInit {
       squre.audio.load();
       squre.audio.play();
       this.subscription = this.source.subscribe((val) => this.openInterval());
+    }else if( this.lstSquersNextRound.indexOf(squre)!=-1){
+      return;
     }
     this.saveUserAction.push(' User play the song - ' + squre.audioName);
     this.lstSquersNextRound.push(squre);
