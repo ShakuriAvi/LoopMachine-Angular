@@ -13,7 +13,7 @@ When the user presses the stop button the song stop immediately.</br>
 The program was implemented in Angular.</br>
 The program read from the Json file all the song names that the program will play.</br>
 The program is responsive to any cell phone / web browser device. </br>
-
+The user can to record last actions.
 
 
 
