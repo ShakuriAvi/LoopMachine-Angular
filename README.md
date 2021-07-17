@@ -8,12 +8,13 @@ When the user click on Stop button the status box change to "Off".</br>
 In addition, at the bottom of the page, appears all the actions that the user performed in order.</br>
 After click on start buttom the song is played only in the next loop (the next loop happens when all the songs have finished playing together - end of cycle).</br>
 When the user presses the stop button the song stop immediately.</br>
+The user can to record last actions, by the buttons :  On, Off and Play.
 
 # Implementation
 The program was implemented in Angular.</br>
 The program read from the Json file all the song names that the program will play.</br>
 The program is responsive to any cell phone / web browser device. </br>
-The user can to record last actions.
+
 
 
 
