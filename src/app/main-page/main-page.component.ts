@@ -20,7 +20,7 @@ export class MainPageComponent implements OnInit {
   saveUserAction: Array<String> = [];
   constructor(private json: AppSettingsService) {
     console.log('const');
-    json.getData('../assets/lstNameAudio.json').subscribe((result) => {
+    json.getData('assets/lstNameAudio.json').subscribe((result) => {
       this.lstNameItems = result;
       console.log(this.lstNameItems);
       this.initSquers();
