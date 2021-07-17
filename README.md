@@ -17,9 +17,7 @@ The program is responsive to any cell phone / web browser device. </br>
 
 
 
+![moveoPart1](https://user-images.githubusercontent.com/65177459/126050930-a5ad91ae-2434-419f-a309-df9b0d09f983.png)
+![moveoPart2](https://user-images.githubusercontent.com/65177459/126050928-0c4befb6-3814-4136-9eee-b7b36442a26f.png)
+![moveoPart3](https://user-images.githubusercontent.com/65177459/126050929-f79b9a05-3bbf-4056-a2ed-f612441d0546.png)
 
-![moveoPart1](https://user-images.githubusercontent.com/65177459/125971624-18265315-ac3a-4c29-8e93-6373f07b66cf.png)
-</br>
-
-
-![moveoPart2](https://user-images.githubusercontent.com/65177459/125971619-d4c2d500-e8c9-487d-a0c8-722707f18271.png)
