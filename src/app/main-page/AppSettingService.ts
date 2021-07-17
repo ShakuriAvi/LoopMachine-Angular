@@ -6,12 +6,10 @@ import { Observable } from 'rxjs';
 export class AppSettingsService {
 
    constructor(private http: HttpClient) {}
-     getData(url:any): Observable<any> {
-        return this.http.get<any>(url);
+     getData(url:string): Observable<any> {
+        return this.http.get<string>(url);
     }
-    // public getJSON(): Observable<any> {
-    //     return this.http.get("../assets/lstNameAudio.json");
-    // }
+
 }
 
 

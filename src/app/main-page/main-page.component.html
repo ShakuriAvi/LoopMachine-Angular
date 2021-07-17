@@ -1,21 +1,33 @@
+<div class="tableRecord">
+    <table class="record">
+        <tr class="titleRecored">
+            <th></th>
+            <th>Record</th>
+            <th></th>
+        </tr>
+        <tr>
+            <th> <button class="on" (click)="onRecord()">On</button></th>
+            <th> <button class="play" (click)="playOrStopRecord()">Play</button> </th>
+            <th> <button class="off" (click)="offRecord()">Off</button> </th>
+
+        </tr>
+    </table>
+</div>
 <div class="squers">
-    <div class="unit" *ngFor="let squer of lstSquersItems;">
-        <h1>{{squer.audioName}}</h1>
-        <span class="status">
-        {{squer.status}}
-    </span>
-        <div>
-            <button class="play" (click)="playSound(squer)">Play</button>
-            <button class="stop" (click)="stopSound(squer)">Stop</button>
-        </div>
-    </div>
 
-    <div class="rounds">
-
-        <h1> User Action </h1>
-        <div *ngFor="let action of saveUserAction; let i = index">
-            <p> {{i+1}} :{{action}}</p>
-        </div>
+    <div class="unit" *ngFor="let loopSong of lstSquersItems;">
+        <app-song-squer [loopSong]="loopSong" (play)="playSound(loopSong)" (stop)="stopSound(loopSong)">
+        </app-song-squer>
 
     </div>
+
+
+</div>
+<div class="rounds">
+
+    <h1> User Action </h1>
+    <div *ngFor="let action of saveUserAction; let i = index">
+        <p> {{i+1}} :{{action}}</p>
+    </div>
+
 </div>

@@ -1,11 +1,11 @@
 [
-    "120_future_funk_beats_25",
-    "120_stutter_breakbeats_16",
-    "Bass Warwick heavy funk groove on E 120 BPM",
-    "electric guitar coutry slide 120bpm - B",
-    "FUD_120_StompySlosh",
-    "GrooveB_120bpm_Tanggu",
-    "MazePolitics_120_Perc",
-    "PAS3GROOVE1.03B",
-    "SilentStar_120_Em_OrganSynth"
+    { "id": 1, "name": "120_future_funk_beats_25" },
+    { "id": 2, "name": "120_stutter_breakbeats_16" },
+    { "id": 3, "name": "Bass Warwick heavy funk groove on E 120 BPM" },
+    { "id": 4, "name": "electric guitar coutry slide 120bpm - B" },
+    { "id": 5, "name": "FUD_120_StompySlosh" },
+    { "id": 6, "name": "GrooveB_120bpm_Tanggu" },
+    { "id": 7, "name": "MazePolitics_120_Perc" },
+    { "id": 8, "name": "PAS3GROOVE1.03B" },
+    { "id": 9, "name": "SilentStar_120_Em_OrganSynth" }
 ]

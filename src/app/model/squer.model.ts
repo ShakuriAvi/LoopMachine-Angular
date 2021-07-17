@@ -1,6 +1,7 @@
 export interface Squer {
-  audioName: String; // Added
+  audioName: string; // Added
   audio: any;
   status: String;
   click: Boolean;
+  id: number;
 }

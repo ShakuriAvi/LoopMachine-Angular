@@ -8,12 +8,14 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { HttpClientModule  } from '@angular/common/http';
 import { AppSettingsService } from './main-page/AppSettingService';
 import { HeaderComponent } from './header/header.component';
+import { SongSquerComponent } from './song-squer/song-squer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    HeaderComponent
+    HeaderComponent,
+    SongSquerComponent
   ],
   imports: [
     BrowserModule,
