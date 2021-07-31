@@ -1,4 +1,5 @@
 # LoopMachine-Angular
+ https://shakuriavi.github.io/LoopMachine-Angular/
 </br>
 There are 9 elements in the program: each element is a song that plays for ten seconds,</br>
 under each element there are two buttons: play and stop.</br>
